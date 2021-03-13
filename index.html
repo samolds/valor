@@ -23,8 +23,8 @@
 
     nav {
       margin: 0 auto;
-      width: 75%;
       text-align: center;
+      padding: 5em 0;
     }
 
     nav a {
@@ -34,15 +34,14 @@
 
     section {
       margin: 0 auto;
-      padding: 3em 10em;
-      width: 60%;
+      padding: 3em 15%;
     }
 
     section img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding: 0 3em;
+      padding: 1em 1em 1em 3em;
       width: 250px;
     }
 
@@ -52,23 +51,26 @@
     a:active { color: inherit; }
 
     .why-section {
-      width: 70%;
+      padding: 3em 10%;
     }
 
     .why-section div {
       width: 50%;
-      min-width: 400px;
     }
 
-    .hero-img {
-      width: 100%;
-      display: grid;
-      height: 100%;
-    }
-
-    .hero-img img {
+    .hero-img video {
       width: 100%;
       margin: auto;
+    }
+
+    .hero-img .dark-overlay {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: #000;
+      opacity: 0.5;
     }
 
     .banner {
@@ -97,10 +99,10 @@
       font-weight: bold;
       text-decoration: none;
       padding: 1em;
-      border: 1px #000 solid;
+      border: 1px #fff solid;
       border-radius: 1em;
       min-width: 100px;
-      color: #000;
+      color: #fff
     }
 
     .button:hover {
@@ -148,7 +150,7 @@
     .page-title {
       font-size: 1em;
       font-weight: normal;
-      padding-bottom: 1.5em;
+      padding: 3em 0 1.5em;
     }
 
     .pull-left { float: left; }
@@ -170,47 +172,60 @@
 
     .blue-title { color: #0f86a2 !important; border-color: #0f86a2 !important; }
     a.blue-title:hover { color: #fff3c9 !important; border-color: #fff3c9 !important; }
+
+    .white-title { color: #fff !important; border-color: #fff !important; }
+    a.white-title:hover { color: #fff3c9 !important; border-color: #fff3c9 !important; }
   </style>
 </head>
 <body>
 
-<div class="color0">
-  <section></section>
-  <nav class="heading">
-    <div>
-      <span class="site-title blue-title">Valor</span>
-    </div>
+<nav class="heading color1">
+  <div>
+    <span class="site-title blue-title">Valor</span>
+  </div>
 
-    <div>
-      <a class="blue-title" href="#works">How it works</a>
-      <a class="blue-title" href="#features">Features</a>
-      <a class="blue-title" href="#waitlist">Waitlist</a>
-    </div>
-  </nav>
-  <section></section>
-</div>
+  <div>
+    <a class="white-title" href="#works">How it works</a>
+    <a class="white-title" href="#features">Features</a>
+    <a class="white-title" href="#waitlist">Waitlist</a>
+  </div>
+</nav>
 
 <main>
 
+<!--
+https://www.istockphoto.com/search/2/film?phrase=friends%20beach%20travel
+videos:
+
+src="https://media.istockphoto.com/videos/at-the-college-house-costume-party-fun-guy-wearing-space-suit-dances-video-id1078049102"
+src="https://media.istockphoto.com/videos/asian-two-beautiful-young-women-surfer-girls-in-bikinis-with-white-video-id1124688246"
+src="https://media.istockphoto.com/videos/cliff-jumping-at-sunset-video-id909245588"
+src="https://media.istockphoto.com/videos/asian-two-beautiful-young-women-surfer-girls-in-bikinis-with-white-video-id1124692324"
+src="https://media.istockphoto.com/videos/resolution-slowmotion-asian-woman-happy-group-friends-enjoy-summer-video-id1152151190"
+-->
 
 
 <div class="banner">
+  <div class="hero-img">
+    <div class="dark-overlay"></div>
+    <video autoplay muted loop name="media">
+      <source
+        src="https://media.istockphoto.com/videos/cliff-jumping-at-sunset-video-id909245644"
+      type="video/mp4">
+    </video>
+  </div>
+
   <div class="call-to-action center-text">
     <h1 class="page-title">
       Find a travel buddy for that next trip
     </h1>
     <a href="#waitlist" class="button">Join the Waitlist</a>
   </div>
-
-  <div class="hero-img">
-    <img src="./img/hero.jpg" />
-  </div>
 </div>
 
 
-
 <div class="color3">
-  <section class="pull-left">
+  <section>
     <img class="pull-right" src="./img/home.png" />
     <h2 class="blue-title">What is Valor?</h2>
     <p>
@@ -218,13 +233,13 @@
     friend group for other travelers to split costs and make memories. Filter
     based on travel location, travel dates, age, gender, and lots more!
     </p>
+    <div class="clear"></div>
   </section>
-  <div class="clear"></div>
 </div>
 
 
-<div id="works" class="color0">
-  <section class="pull-right">
+<div id="works" class="color1">
+  <section>
     <h2 class="blue-title">How it Works</h2>
     <ol>
       <li>Download Valor</li>
@@ -240,12 +255,11 @@
       <li>Find your perfect roomie</li>
     </ol>
   </section>
-  <div class="clear"></div>
 </div>
 
 
 <div id="features" class="color3">
-  <section class="pull-left">
+  <section>
     <img class="pull-right" src="./img/search.png" />
 
     <h2 class="blue-title">Search</h2>
@@ -258,13 +272,13 @@
     If you're only available to travel during a specific window, search for
     others who are looking during that same time in any location.
     </p>
+    <div class="clear"></div>
   </section>
-  <div class="clear"></div>
 </div>
 
 
-<div class="color0">
-  <section class="pull-right">
+<div class="color1">
+  <section>
     <img class="pull-left" src="./img/profile.png" />
 
     <h2 class="blue-title">The Profile</h2>
@@ -273,8 +287,8 @@
     before connecting and starting your adventure together. Check out previous
     roommate ratings and any possible mutual connections.
     </p>
+    <div class="clear"></div>
   </section>
-  <div class="clear"></div>
 </div>
 
 
@@ -313,7 +327,7 @@
 </div>
 
 
-<div id="waitlist" class="color0">
+<div id="waitlist" class="color1">
   <section>
     <h2 class="blue-title">Get on the waitlist!</h2>
     <p>
